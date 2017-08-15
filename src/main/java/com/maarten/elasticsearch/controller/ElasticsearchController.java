@@ -59,7 +59,7 @@ public class ElasticsearchController {
 		//多字段分类匹配
 		BoolQueryBuilder bu = QueryBuilders.boolQuery();
 		QueryBuilder queryBuilder = QueryBuilders.matchQuery("firstname", "徐");
-		QueryBuilder queryBuilder1 = QueryBuilders.matchQuery("lastname", "梦成");
+		QueryBuilder queryBuilder1 = QueryBuilders.matchQuery("lastname", "成");
 		bu.must(queryBuilder);
 		bu.must(queryBuilder1);
 		searchResult =  clienteDao.search(bu);

@@ -1,0 +1,12 @@
+nginx/
+.idea
+node_modules/
+.settings
+bin/
+target/
+logs/
+*.log
+*.iml
+*.classpath
+*.project
+nginx
