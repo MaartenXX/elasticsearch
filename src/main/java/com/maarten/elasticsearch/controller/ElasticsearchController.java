@@ -31,7 +31,7 @@ public class ElasticsearchController {
     private ClienteRepository clienteDao; 
 	
 	@RequestMapping(value = "test", method = RequestMethod.POST)  
-    public void test(){  
+    public String test(){  
 		
 		Iterable<Cliente> searchResult = null;
 		Iterator<Cliente> iterator = null;
@@ -89,7 +89,7 @@ public class ElasticsearchController {
 		while(iterator.hasNext()){
 			System.out.println(iterator.next());
 		}
-		
+		return "ok";
     }  
 	
 	@RequestMapping(value = "save", method = RequestMethod.GET)  
@@ -105,4 +105,5 @@ public class ElasticsearchController {
         cliente.setGender("男");
         esl.saveCliente(cliente);
     } 
+	
 }
